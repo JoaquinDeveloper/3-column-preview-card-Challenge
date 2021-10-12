@@ -1,0 +1,180 @@
+// Variables
+// Colors
+//Primary
+$Bright-orange: hsl(31, 77%, 52%);
+$Dark-cyan: hsl(184, 100%, 22%);
+$Very-dark-cyan: hsl(179, 100%, 13%);
+//Neutral
+$Transparent-white: hsla(0, 0%, 100%, 0.75);
+// (paragraphs)
+$Very-light-gray: hsl(0, 0%, 95%);
+// (background, headings, buttons)
+//Fonts
+$font-titles: 'Big Shoulders Display',
+cursive;
+$font-text: 'Lexend Deca',
+sans-serif;
+
+html {
+    box-sizing: border-box;
+    // 62.5% => 1rem = 10px
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $Very-light-gray;
+}
+
+.flex-container {
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    min-height: 500px;
+    overflow: hidden;
+
+    @media only screen and (max-width: 800px) {
+        flex-direction: column;
+        margin: 60px 30px;
+        max-width: 500px;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    color: $Very-light-gray;
+    padding: 50px;
+
+    &-name {
+        font: 100% $font-titles;
+        font-size: 3.6rem;
+        margin-top: 40px;
+        letter-spacing: 0.2rem;
+        color: $Very-light-gray;
+    }
+
+    &-info {
+        font: 100% $font-text;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        color: $Transparent-white;
+        opacity: 0.7;
+    }
+
+    &-icon {
+        width: 68px;
+    }
+
+    &-button {
+        text-align: center;
+        margin-top: 74px;
+        padding: 16px 3px;
+        background-color: $Very-light-gray;
+        font: 100% $font-text;
+        font-size: 1.5rem;
+        border-radius: 40px;
+        width: 80%;
+        text-decoration: none;
+
+    }
+
+    &:first-child {
+        background-color: $Bright-orange;
+
+        a {
+            color: $Bright-orange;
+            border: 2px solid $Bright-orange;
+            transition: all .4s ease-out;
+
+            &:hover {
+                background-color: $Bright-orange;
+                color: $Transparent-white;
+                border: 2px solid $Transparent-white;
+            }
+        }
+    }
+
+    &:nth-child(2) {
+        background-color: $Dark-cyan;
+
+        a {
+            color: $Dark-cyan;
+            border: 2px solid $Dark-cyan;
+            transition: all .4s ease-out;
+
+            &:hover {
+                background-color: $Dark-cyan;
+                color: $Transparent-white;
+                border: 2px solid $Transparent-white;
+            }
+        }
+    }
+
+    &:last-child {
+        background-color: $Very-dark-cyan;
+
+        a {
+            border: 2px solid $Very-dark-cyan;
+            color: $Very-dark-cyan;
+            transition: all .4s ease-out;
+
+            &:hover {
+                background-color: $Very-dark-cyan;
+                color: $Transparent-white;
+                border: 2px solid $Transparent-white;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        padding: 60px;
+
+        &-icon {
+            width: 55px;
+        }
+
+        &-name {
+            font-size: 3.4rem;
+            margin-top: 30px;
+            letter-spacing: 0.2rem;
+            color: $Very-light-gray;
+        }
+
+        &-info {
+            font-size: 1.5rem;
+            line-height: 2.4rem;
+        }
+
+        &-button {
+            text-align: center;
+            margin-top: 40px;
+            padding: 14px 2px;
+            background-color: $Very-light-gray;
+            font: 100% $font-text;
+            font-size: 1.6rem;
+            border-radius: 50px;
+            width: 75%;
+            text-decoration: none;
+        }
+    }
+}
+
+// footer
+.footer {
+    margin-top: 40px;
+}
