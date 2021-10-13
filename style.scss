@@ -90,17 +90,15 @@ body {
         border-radius: 40px;
         width: 80%;
         text-decoration: none;
-
     }
+    
 
-    &:first-child {
+    &-1 {
         background-color: $Bright-orange;
-
         a {
             color: $Bright-orange;
             border: 2px solid $Bright-orange;
             transition: all .4s ease-out;
-
             &:hover {
                 background-color: $Bright-orange;
                 color: $Transparent-white;
@@ -108,10 +106,8 @@ body {
             }
         }
     }
-
-    &:nth-child(2) {
+    &-2 {
         background-color: $Dark-cyan;
-
         a {
             color: $Dark-cyan;
             border: 2px solid $Dark-cyan;
@@ -124,8 +120,7 @@ body {
             }
         }
     }
-
-    &:last-child {
+    &-3 {
         background-color: $Very-dark-cyan;
 
         a {
@@ -158,11 +153,13 @@ body {
         &-info {
             font-size: 1.5rem;
             line-height: 2.4rem;
+            width: 90%;
+
         }
 
         &-button {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 70px;
             padding: 14px 2px;
             background-color: $Very-light-gray;
             font: 100% $font-text;
